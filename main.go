@@ -33,4 +33,5 @@ func RegisterProductRoutes(router *mux.Router) {
 	router.HandleFunc("/api/products", controllers.CreateProduct).Methods("POST")
 	router.HandleFunc("/api/products/{id}", controllers.UpdateProduct).Methods("PUT")
 	router.HandleFunc("/api/products/{id}", controllers.DeleteProduct).Methods("DELETE")
+	router.HandleFunc("/api/hello")
 }

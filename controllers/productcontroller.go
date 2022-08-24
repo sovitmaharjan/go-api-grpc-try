@@ -1,13 +1,16 @@
 package controllers
 
 import (
+	"context"
 	"encoding/json"
+	"log"
 	"net/http"
 
 	"github.com/sovitmaharjan/go-api-grpc-try/database"
 	"github.com/sovitmaharjan/go-api-grpc-try/entities"
 
 	"github.com/gorilla/mux"
+	protot "github.com/sovitmaharjan/go-api-grpc-try/proto/test"
 )
 
 func CreateProduct(w http.ResponseWriter, r *http.Request) {
@@ -73,4 +76,9 @@ func DeleteProduct(w http.ResponseWriter, r *http.Request) {
 	var product entities.Product
 	database.Instance.Delete(&product, productId)
 	json.NewEncoder(w).Encode("Product Deleted Successfully!")
+}
+
+func SayHello(ctx context.Context, in protot.HelloRequest) (protot.HelloReply, error) {
+	log.Printf("Received: %v", in.GetName())
+	return protot.HelloReply{Message: "Hello " + in.GetName()}, nil
 }
