@@ -1,8 +1,9 @@
 package database
 
 import (
-	"golang-crud-rest-api/entities"
 	"log"
+
+	"github.com/sovitmaharjan/go-api-grpc-try/entities"
 
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"

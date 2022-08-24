@@ -2,9 +2,10 @@ package controllers
 
 import (
 	"encoding/json"
-	"golang-crud-rest-api/database"
-	"golang-crud-rest-api/entities"
 	"net/http"
+
+	"github.com/sovitmaharjan/go-api-grpc-try/database"
+	"github.com/sovitmaharjan/go-api-grpc-try/entities"
 
 	"github.com/gorilla/mux"
 )

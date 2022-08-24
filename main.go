@@ -2,10 +2,11 @@ package main
 
 import (
 	"fmt"
-	"golang-crud-rest-api/controllers"
-	"golang-crud-rest-api/database"
 	"log"
 	"net/http"
+
+	"github.com/sovitmaharjan/go-api-grpc-try/controllers"
+	"github.com/sovitmaharjan/go-api-grpc-try/database"
 
 	"github.com/gorilla/mux"
 )
